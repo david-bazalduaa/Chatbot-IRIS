@@ -1,26 +1,32 @@
-# Iris Assistant - Custom AI Chatbot (Llama 3)
+# Iris Assistant - Enterprise Custom AI Solution (Llama 3)
 
 ![Python Badge](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)
 ![Gradio Badge](https://img.shields.io/badge/Built%20with-Gradio-orange?style=flat-square&logo=gradio)
-![HF Transformers Badge](https://img.shields.io/badge/Transformers-yellow?style=flat-square)
+![Llama 3 Badge](https://img.shields.io/badge/Model-Llama%203-blueviolet?style=flat-square)
 
-This repository contains a modern, custom chat interface built with **Gradio**, designed to interact with a fine-tuned **Llama 3** model.
+This repository hosts **Iris Assistant**, a specialized conversational interface designed to demonstrate the capabilities of **fine-tuning Large Language Models (LLMs) on private, domain-specific data.**
 
-The primary objective of this application is to allow users to temporarily "train" the assistant by providing **custom context** and defining its behavior via a *System Prompt*, all within a clean and minimalist graphical interface.
+### The Business Value
+In the current enterprise landscape, generic models often fail to capture the nuances of internal business operations, proprietary terminology, or specific brand voices.
+
+**Iris Assistant** serves as a proof-of-concept for businesses looking to:
+1.  **Secure Proprietary Data:** Create internal LLMs that understand sensitive company data without relying on external, public APIs.
+2.  **Enhance Accuracy:** Drastically reduce hallucinations by training the model on a curated dataset of verified company knowledge.
+3.  **Automate Domain-Specific Tasks:** Deploy an assistant capable of drafting reports, answering technical queries, or managing customer support with the specific tone and knowledge of the organization.
 
 ---
 
 ## Live Demo
 
-Try the application running on Hugging Face Spaces:
+Interact with the fine-tuned model via the custom interface hosted on Hugging Face Spaces:
 
 [![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Open%20Demo-blue?style=for-the-badge)]([INSERT_YOUR_HUGGINGFACE_SPACE_URL_HERE])
 
 ---
 
-## Screenshot
+## Interface Preview
 
-A preview of the custom user interface:
+The application features a minimalist, "glassmorphism" design focused on usability and parameter control.
 
 > **Note:** Replace `screenshot.png` with the actual path to your image in the repository.
 
@@ -28,57 +34,27 @@ A preview of the custom user interface:
 
 ---
 
-## Key Features
+## The Development Process
 
-* **Base Model:** Utilizes `DavidBazaldua/llama3_finetuned_transformes`, an optimized Llama 3 model.
-* **Dynamic Context (RAG-lite):** Allows users to input documents, notes, or data into the configuration panel for the model to use as immediate reference.
-* **Customizable System Prompt:** Define the exact personality and instructions for the assistant.
-* **Parameter Control:** Real-time adjustment of creativity (Temperature), response length (Max Tokens), and sampling (Top-P).
-* **UI/UX Design:** Clean minimalist interface, forced light mode, and an optimized chat area with an internal scrollbar.
-* **Optimization:** Configured for efficient CPU execution.
+This project was built following a structured pipeline to transform a general-purpose model into a specialized assistant.
 
----
+### 1. Data Curation and Formatting
+The foundation of this project is **private data**. Raw unstructured data (documents, internal wikis, logs) was processed and converted into structured JSON/Text formats suitable for Supervised Fine-Tuning (SFT). This ensures the model learns the specific patterns and knowledge required by the business.
 
-## Installation and Local Usage
+### 2. Fine-Tuning Llama 3
+We utilized the **Llama 3** architecture as the base model. Using efficient training techniques (such as LoRA/QLoRA), the model was fine-tuned on the curated dataset. This process updated the model's weights to prioritize the domain-specific information over general internet knowledge.
 
-Instructions to run the application in a local environment.
+### 3. Inference Engine Integration
+The fine-tuned model (`DavidBazaldua/llama3_finetuned_transformes`) was integrated using the **Hugging Face Transformers** library. The inference pipeline was optimized for CPU execution to demonstrate cost-effective deployment capabilities.
 
-### Prerequisites
-
-* Python 3.10 or higher.
-* Git.
-
-### Steps
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [INSERT_YOUR_GITHUB_REPO_URL_HERE]
-    cd [REPO_DIRECTORY_NAME]
-    ```
-
-2.  **Create a virtual environment:**
-    ```bash
-    python -m venv venv
-    # On Windows:
-    .\venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
-    ```
-
-3.  **Install dependencies:**
-    ```bash
-    pip install torch transformers gradio
-    ```
-
-4.  **Run the application:**
-    ```bash
-    python app.py
-    ```
+### 4. Dynamic Context Injection (RAG-Lite)
+While the model is fine-tuned, businesses often need to provide real-time updates without retraining. The interface includes a **Dynamic Context** system, allowing users to inject temporary data (via the "Context" panel) into the system prompt at runtime, combining the benefits of fine-tuning with Retrieval-Augmented Generation (RAG) principles.
 
 ---
 
 ## Tech Stack
 
-* [Gradio](https://www.gradio.app/) - Interactive web interface.
-* [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) - Language model inference.
-* [PyTorch](https://pytorch.org/) - Deep learning framework.
+* **Model Architecture:** Meta Llama 3 (Fine-tuned).
+* **Interface:** Gradio (Custom CSS & Layout).
+* **Backend:** PyTorch & Transformers.
+* **Environment:** Python 3.10+.
