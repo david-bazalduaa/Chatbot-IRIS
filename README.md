@@ -1,21 +1,31 @@
-# Iris Assistant - Llama 3.2 Fine-Tuning & Custom Interface
+# Iris Assistant - Enterprise Custom AI Solution (Llama 3)
 
+![Python Badge](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)
+![Gradio Badge](https://img.shields.io/badge/Built%20with-Gradio-orange?style=flat-square&logo=gradio)
+![Llama 3 Badge](https://img.shields.io/badge/Model-Llama%203-blueviolet?style=flat-square)
 This repository hosts Iris Assistant, a specialized conversational interface designed to interact with a fine-tuned Llama 3.2 (3B) model.
 
 The primary objective of this project is to demonstrate a complete pipeline for creating domain-specific Large Language Models (LLMs). While this demonstration model was trained on high-quality public instruction data, the architecture serves as a proof-of-concept for enterprises to securely fine-tune models on proprietary data and inject context in real-time.
 
+---
+
 ## Live Demo
 
-Interact with the model via the custom interface hosted on Hugging Face Spaces:
+Interact with the fine-tuned model via the custom interface hosted on Hugging Face Spaces:
 
-[INSERT_YOUR_HUGGINGFACE_SPACE_URL_HERE]
+[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Open%20Demo-blue?style=for-the-badge)]([INSERT_YOUR_HUGGINGFACE_SPACE_URL_HERE])
+
+---
 
 ## Interface Preview
 
-The application features a custom "glassmorphism" design built with Gradio, focused on clean usability and parameter control.
+The application features a minimalist, "glassmorphism" design focused on usability and parameter control.
+
+> **Note:** Replace `screenshot.png` with the actual path to your image in the repository.
 
 ![Chatbot Interface]([screenshot.png])
 
+---
 ## The Development Process
 
 This solution was built following a structured pipeline to optimize a general-purpose model into a responsive assistant.
