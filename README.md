@@ -3,6 +3,7 @@
 ![Python Badge](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)
 ![Gradio Badge](https://img.shields.io/badge/Built%20with-Gradio-orange?style=flat-square&logo=gradio)
 ![Llama 3 Badge](https://img.shields.io/badge/Model-Llama%203-blueviolet?style=flat-square)
+
 This repository hosts Iris Assistant, a specialized conversational interface designed to interact with a fine-tuned Llama 3.2 (3B) model.
 
 The primary objective of this project is to demonstrate a complete pipeline for creating domain-specific Large Language Models (LLMs). While this demonstration model was trained on high-quality public instruction data, the architecture serves as a proof-of-concept for enterprises to securely fine-tune models on proprietary data and inject context in real-time.
