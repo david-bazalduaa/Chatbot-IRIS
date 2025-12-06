@@ -51,7 +51,7 @@ The frontend allows users to perform Retrieval-Augmented Generation (RAG) manual
 To validate the training stability and generation quality, we performed a quantitative evaluation using a distinct subset of the data.
 
 ### Methodology
-We selected a random sample of 1,000 entries from the FineTome-100k dataset to serve as a validation set. The evaluation was conducted using the SFTTrainer from the TRL library. Crucially, we employed the train_on_responses_only technique, ensuring that the loss was calculated solely on the assistant's generated responses, masking the user's input prompts to prevent artificial inflation of metrics.
+We selected a random sample of 150 entries from the FineTome-100k dataset to serve as a validation set. The evaluation was conducted using the SFTTrainer from the TRL library. Crucially, we employed the train_on_responses_only technique, ensuring that the loss was calculated solely on the assistant's generated responses, masking the user's input prompts to prevent artificial inflation of metrics.
 
 ### Results
 The evaluation yielded the following performance metrics:
