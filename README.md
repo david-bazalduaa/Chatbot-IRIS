@@ -10,6 +10,14 @@ The primary objective of this project is to demonstrate a complete pipeline for 
 
 ---
 
+## Model Repository
+
+You can access all model files, including the adapters, tokenizer configuration, and GGUF versions, directly on Hugging Face:
+
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Repository-blue?style=for-the-badge)](https://huggingface.co/DavidBazaldua/llama3_finetuned_transformes)
+
+---
+
 ## Live Demo
 
 Interact with the fine-tuned model via the custom interface hosted on Hugging Face Spaces:
