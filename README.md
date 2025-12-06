@@ -22,7 +22,7 @@ Interact with the fine-tuned model via the custom interface hosted on Hugging Fa
 
 The application features a minimalist, "glassmorphism" design focused on usability and parameter control.
 
-![Chatbot Interface]([Chatbot Interface.png])
+![Chatbot Interface]([Chatbot_Interface.png])
 
 ---
 ## The Development Process
