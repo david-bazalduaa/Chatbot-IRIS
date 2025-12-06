@@ -53,6 +53,7 @@ During training, we enabled Hugging Face's built-in checkpointing so the model c
 * Scheduler state
 * Training process
 * LoRA adapter weights
+
 If the session disconnected or timed out, we resumed training by uploading the most recent checkpoint which were saved in Google Drive during training.
 
 ### 4. Quantization and Export
