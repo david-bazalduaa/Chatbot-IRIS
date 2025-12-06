@@ -59,39 +59,3 @@ The frontend allows users to perform Retrieval-Augmented Generation (RAG) manual
 * Training Framework: Unsloth (PyTorch, TRL)
 * Interface: Gradio
 * Deployment Format: GGUF / Transformers
-
-## Installation and Local Usage
-
-Prerequisites: Python 3.10+ and Git.
-
-1. Clone the repository
-git clone [INSERT_YOUR_GITHUB_REPO_URL_HERE]
-
-2. Install dependencies
-pip install torch transformers gradio
-
-3. Run the application
-python app.py
-
-This project was built following a structured pipeline to transform a general-purpose model into a specialized assistant.
-
-### 1. Data Curation and Formatting
-The foundation of this project is **private data**. Raw unstructured data (documents, internal wikis, logs) was processed and converted into structured JSON/Text formats suitable for Supervised Fine-Tuning (SFT). This ensures the model learns the specific patterns and knowledge required by the business.
-
-### 2. Fine-Tuning Llama 3
-We utilized the **Llama 3** architecture as the base model. Using efficient training techniques (such as LoRA/QLoRA), the model was fine-tuned on the curated dataset. This process updated the model's weights to prioritize the domain-specific information over general internet knowledge.
-
-### 3. Inference Engine Integration
-The fine-tuned model (`DavidBazaldua/llama3_finetuned_transformes`) was integrated using the **Hugging Face Transformers** library. The inference pipeline was optimized for CPU execution to demonstrate cost-effective deployment capabilities.
-
-### 4. Dynamic Context Injection (RAG-Lite)
-While the model is fine-tuned, businesses often need to provide real-time updates without retraining. The interface includes a **Dynamic Context** system, allowing users to inject temporary data (via the "Context" panel) into the system prompt at runtime, combining the benefits of fine-tuning with Retrieval-Augmented Generation (RAG) principles.
-
----
-
-## Tech Stack
-
-* **Model Architecture:** Meta Llama 3 (Fine-tuned).
-* **Interface:** Gradio (Custom CSS & Layout).
-* **Backend:** PyTorch & Transformers.
-* **Environment:** Python 3.10+.
