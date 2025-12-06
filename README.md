@@ -46,6 +46,21 @@ Post-training, the model was merged and exported to GGUF format using llama.cpp.
 ### 4. Interface and Dynamic Context
 The frontend allows users to perform Retrieval-Augmented Generation (RAG) manually. By using the "Context" panel on the left, users can inject temporary data (documents, internal wikis, project notes) into the system prompt. This allows the model to answer questions based on information it was not originally trained on, simulating a private enterprise environment.
 
+## Model Evaluation
+
+To validate the training stability and generation quality, we performed a quantitative evaluation using a distinct subset of the data.
+
+### Methodology
+We selected a random sample of 1,000 entries from the FineTome-100k dataset to serve as a validation set. The evaluation was conducted using the SFTTrainer from the TRL library. Crucially, we employed the train_on_responses_only technique, ensuring that the loss was calculated solely on the assistant's generated responses, masking the user's input prompts to prevent artificial inflation of metrics.
+
+### Results
+The evaluation yielded the following performance metrics:
+
+* Evaluation Loss: 0.6947
+* Perplexity: 2.003
+
+A perplexity score near 2.0 indicates that the model has a strong grasp of the instruction-following structure and is predicting the next token in the conversational sequence with high confidence.
+
 ## Application Features
 
 * Dynamic Context Injection: Real-time integration of user-provided text into the generation loop.
