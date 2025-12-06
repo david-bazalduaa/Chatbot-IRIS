@@ -1,4 +1,4 @@
-# Iris Assistant - Enterprise Custom AI Solution (Llama 3)
+# Iris Assistant - Custom AI Solution (Llama 3)
 
 ![Python Badge](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)
 ![Gradio Badge](https://img.shields.io/badge/Built%20with-Gradio-orange?style=flat-square&logo=gradio)
