@@ -14,7 +14,7 @@ The primary objective of this project is to demonstrate a complete pipeline for 
 
 Interact with the fine-tuned model via the custom interface hosted on Hugging Face Spaces:
 
-[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Open%20Demo-blue?style=for-the-badge)]([INSERT_YOUR_HUGGINGFACE_SPACE_URL_HERE])
+[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Open%20Demo-blue?style=for-the-badge)](https://huggingface.co/spaces/DavidBazaldua/iris)
 
 ---
 
