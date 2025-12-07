@@ -60,7 +60,7 @@ If the session disconnected or timed out, we resumed training by uploading the m
 Post-training, the model was merged and exported to GGUF format using llama.cpp. This step ensures the model can be deployed in resource-constrained environments (CPU execution) while maintaining inference speed.
 
 ### 5. Interface and Dynamic Context
-The frontend allows users to perform Retrieval-Augmented Generation (RAG) manually. By using the "Context" panel on the left, users can inject temporary data (documents, internal wikis, project notes) into the system prompt. This allows the model to answer questions based on information it was not originally trained on, simulating a private enterprise environment.
+The frontend allows users to perform Retrieval-Augmented Generation (RAG) manually. By using the "Context" panel on the left, users can inject temporary data into the system prompt. This allows the model to answer questions based on information it was not originally trained on, simulating a private enterprise environment.
 
 ## Model Evaluation
 
